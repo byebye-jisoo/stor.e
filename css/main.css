@@ -1,0 +1,111 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Alias";
+  src: url("../font/Alias-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SwisRoman";
+  src: url("../font/Swis721BTRoman.ttf") format("truetype");
+}
+
+/* 기본 글꼴, 배경 및 텍스트 색상 */
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 페이지 레이아웃을 위한 고정 크기 설정 */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+/* 사이드바 설정 */
+.sidebar {
+  width: 22.14vw; /* 425px */
+  position: relative;
+}
+
+/* 사이드바의 제목 텍스트 */
+.sidebar h1 {
+  font-family: "Alias";
+  font-size: 4.2vw; /* 96px */
+  position: absolute;
+  left: 3.5vw; /* 50px */
+  top: 13.6vh; /* 133px */
+  color: white;
+}
+
+/* 네비게이션 메뉴 */
+.sidebar nav {
+  position: absolute;
+  left: 3.5vw; /* 67px */
+  display: flex;
+  flex-direction: column;
+  gap: 7.87vh; /* 85px */
+}
+
+.sidebar nav a {
+  width: 8.2vw; /* 157px */
+  height: 3.89vh; /* 42px */
+  line-height: 3.89vh;
+  text-align: center;
+  border: 0.052vw solid white; /* 1px */
+  border-radius: 1.04vw; /* 20px */
+  color: white;
+  text-decoration: none;
+  font-family: "SwisRoman";
+  font-size: 1.05vw; /* 24px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 각 버튼의 위치 설정 */
+.sidebar nav a:nth-child(1) {
+  top: 58.9vh; /* 636px */
+  position: absolute;
+}
+.sidebar nav a:nth-child(2) {
+  top: 66.8vh; /* 721px */
+  position: absolute;
+}
+.sidebar nav a:nth-child(3) {
+  top: 74.6vh; /* 806px */
+  position: absolute;
+}
+.sidebar nav a:nth-child(4) {
+  top: 82.4vh; /* 890px */
+  position: absolute;
+}
+
+.sidebar nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* 이미지 영역 설정 */
+.content img {
+  background-color: aliceblue;
+  width: 63.65vw; /* 1222px */
+  height: 72.78vh; /* 786px */
+  position: absolute;
+  left: 32.9vw; /* 631px */
+  top: 13.6vh; /* 147px */
+  object-fit: cover;
+}

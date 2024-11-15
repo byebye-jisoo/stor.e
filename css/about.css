@@ -1,0 +1,8 @@
+/* 이미지 영역 설정 */
+.content img {
+  left: 11.925vw;
+  background-color: aliceblue;
+  width: 76.15vw;
+  height: 82vh;
+  position: absolute;
+}

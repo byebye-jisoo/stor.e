@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "SwisRoman";
+  src: url("../font/Swis721BTRoman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alias";
+  src: url("../font/Alias-Bold.ttf") format("truetype");
+}
+
+/* 고정된 헤더 스타일 */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* 화면 너비에 맞게 100%로 설정 */
+  height: 9vh; /* 182px을 1080px 기준으로 비율 변환 */
+  background-color: white;
+  border: solid #000;
+  border-width: 0.1vh 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+  font-family: "SwisRoman";
+}
+
+.menu {
+  position: absolute;
+  font-family: "SwisRoman";
+  font-size: 1.25vw;
+  color: black;
+  cursor: pointer;
+  top: 30%;
+  text-decoration: none;
+}
+
+.about {
+  left: 2.6vw;
+}
+
+.connect {
+  left: 10.88vw;
+}
+
+.modeling {
+  left: 20.63vw;
+}
+
+.archiving {
+  left: 90vw;
+}
+
+/* 제목(홈버튼) */
+.project-text {
+  position: absolute;
+  width: 7.55vw; /* 145px을 1920px 기준으로 비율 변환 */
+  height: 40%; /* 43px을 1080px 기준으로 비율 변환 */
+  font-family: "Alias";
+  font-size: 1.875vw; /* 36px을 1920px 기준으로 비율 변환 */
+  color: black;
+  line-height: 3.98vh;
+  letter-spacing: -0.02em;
+  transform: translateX(-50%) rotate(0.04deg);
+  text-align: center;
+  left: 50%;
+  text-decoration: none;
+}
