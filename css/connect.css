@@ -11,23 +11,20 @@ html {
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
-/* 섹션 스타일 */
-.section-container {
-  font-family: "Helvetica";
-  position: relative;
-  top: 16.85vh; /* 헤더 높이 */
-}
-
-.section {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1.35vw;
-}
-
 /* 레이어 스타일 */
 .text-layer {
+  font-family: "Helvetica";
+  font-size: 1.3vh;
+  position: relative;
+  display: flex;
+  margin-top: 12vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.35vw;
   width: 41.2vw; /* 894px을 1920px 기준으로 비율 변환 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 큰 레이어 */

@@ -3,10 +3,15 @@
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Swiss";
+  src: url("../font/Swis721BTRoman.ttf") format("truetype");
+}
+
 /* 빨간 원 */
 .red-circle {
-  width: 1.51vw; /* 29px */
-  height: 2.68vh; /* 29px */
+  width: 1.7vw; /* 29px */
+  aspect-ratio: 1 / 1;
   background-color: red;
   border-radius: 50%;
   position: fixed;
@@ -18,7 +23,9 @@
 /* 빨간 원 중앙의 느낌표 */
 .red-circle .exclamation-mark {
   color: black;
+  font-family: "Swiss";
   font-size: 1vw; /* 29px */
+  font-weight: 500;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -61,7 +68,7 @@
 
 /* 팝업 창 텍스트 */
 .popup .popup-text {
-  font-family: "Pretendard";
+  font-family: "Helvetica";
   font-size: 0.75vw; /* 16px */
   color: white;
   text-align: center;
