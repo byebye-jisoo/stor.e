@@ -41,7 +41,7 @@ html {
   top: 15vh;
   left: 41.15vw;
   width: 48.27vw;
-  height: 0vh;
+  height: auto;
   display: flex;
   gap: 20px;
 }
@@ -61,5 +61,6 @@ html {
   font-family: "Helvetica";
   font-size: 1.39vh; /* 텍스트 크기 */
   color: black; /* 텍스트 색상 */
+  margin-bottom: 3vh;
   margin-left: 0; /* 이미지와 왼쪽 정렬 */
 }
