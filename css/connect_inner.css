@@ -34,27 +34,27 @@ html {
 
 .right {
   position: absolute;
+}
+
+.large-layer {
+  position: relative;
   top: 15vh;
   left: 41.15vw;
   width: 48.27vw;
-  height: 150vh;
+  height: 0vh;
   display: flex;
-  background-color: aliceblue;
   gap: 20px;
 }
 
 .small-layer {
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-  background-color: antiquewhite;
 }
 
 .layer-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background-color: lightgray;
 }
 
 .layer-text {
