@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Page Scroll</title>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/connect_inner.css" />
+    <link rel="stylesheet" href="/css/popup.css" />
+  </head>
+  <body>
+    <!-- 고정된 헤더 -->
+    <header class="fixed-header">
+      <nav class="menu">
+        <a href="/html/about.html" class="menu about">about</a>
+        <a href="/html/connect.html" class="menu connect">connect</a>
+        <a href="/html/modeling.html" class="menu modeling">modeling</a>
+        <a href="/html/archiving.html" class="menu archiving">archiving</a>
+      </nav>
+      <a href="/main.html" class="project-text">STOR.E</a>
+    </header>
+
+    <!-- 좌측 레이어 -->
+    <div class="left">
+      <img src="your-image.jpg" />
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur. Vitae at urna velit vulputate faucibus nec morbi sollicitudin. Sit urna et massa mollis.
+      </div>
+    </div>
+
+    <!-- 우측 레이어 -->
+    <div class="right">
+      <!-- 첫 번째 작은 레이어 -->
+      <div class="small-layer">
+        <img src="/img/connect/connect1/connect01_01.jpg" class="layer-image" />
+        <div class="layer-text">애장품 1</div>
+      </div>
+      <!-- 두 번째 작은 레이어 -->
+      <div class="small-layer">
+        <img src="/img/connect/connect1/connect01_02.jpg" class="layer-image" />
+        <div class="layer-text">애장품 2</div>
+      </div>
+      <!-- 세 번째 작은 레이어 -->
+      <div class="small-layer">
+        <img src="/img/connect/connect1/connect01_03.jpg" class="layer-image" />
+        <div class="layer-text">애장품 3</div>
+      </div>
+    </div>
+    <div class="right">
+      <!-- 첫 번째 작은 레이어 -->
+      <div class="small-layer">
+        <img src="/img/connect/connect1/connect01_01.jpg" class="layer-image" />
+        <div class="layer-text">애장품 1</div>
+      </div>
+      <!-- 두 번째 작은 레이어 -->
+      <div class="small-layer">
+        <img src="/img/connect/connect1/connect01_02.jpg" class="layer-image" />
+        <div class="layer-text">애장품 2</div>
+      </div>
+      <!-- 세 번째 작은 레이어 -->
+      <div class="small-layer">
+        <img src="/img/connect/connect1/connect01_03.jpg" class="layer-image" />
+        <div class="layer-text">애장품 3</div>
+      </div>
+    </div>
+    
+    
+
+      <!-- 빨간 원 -->
+      <div class="red-circle" id="redCircle">
+        <div class="exclamation-mark">!</div>
+      </div>
+
+      <!-- 팝업 창 -->
+      <div class="popup" id="popup">
+        <div class="close-button" id="closeButton">x</div>
+        <p class="popup-text">감상 후 메인 페이지<br />로 돌려주세요 :></p>
+      </div>
+    </div>
+
+    <script src="/js/scroll.js"></script>
+    <script src="/js/popup.js"></script>
+  </body>
+</html>

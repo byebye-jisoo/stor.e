@@ -29,8 +29,8 @@ html {
 
 /* 큰 레이어 */
 .large-layer {
-  top: 33.43vh; /* 361px을 1080px 기준으로 비율 변환 */
-  height: 76.57vh; /* 827px을 1080px 기준으로 비율 변환 */
+  top: 33.43vh;
+  height: 76.57vh;
   display: flex;
   justify-content: center;
   align-items: center;
