@@ -5,7 +5,7 @@ import path from 'path';
 export default defineConfig({
     server: {
       host: '127.0.0.1',
-      port: 5500,
+      port: 5050,
     },
 
     resolve: {
