@@ -6,42 +6,58 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   50, // 시야각
   window.innerWidth / window.innerHeight, // 종횡비
-  0.1, // 카메라 시작 범위
-  1000 // 카메라 끝 범위
+  1, // 카메라 시작 범위
+  10000 // 카메라 끝 범위
 );
-camera.position.set(0, 0, 5);
+camera.position.set(0, 0, 150);
 const renderer = new THREE.WebGLRenderer();
 
-// 렌더러 크기 설정
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-// HTML의 .content에 렌더러 추가
+// 렌더러 크기 설정 및 HTML에 추가
 const content = document.getElementById("content");
+renderer.setSize(content.clientWidth, content.clientHeight);
 content.appendChild(renderer.domElement);
 
-// 카메라 위치 설정
-camera.position.z = 5;
+// 렌더러를 content 요소에 추가
+content.appendChild(renderer.domElement);
+
+// content 요소 스타일 설정
+content.style.position = "absolute";
+content.style.left = "32.9vw";
+content.style.top = "13.6vh";
+content.style.width = "63.65vw";
+content.style.height = "72.78vh";
 
 // GLTFLoader 생성 및 glTF 파일 로드
 const loader = new GLTFLoader();
-loader.load(
-  "../img/resources/modeling.glb",
-  function (gltf) {
-    // 로드된 모델을 장면에 추가
+const url = "../img/resources/modeling.glb";
+loader.load(url, (gltf) => {
     scene.add(gltf.scene);
 
-    // 렌더링 시작
+    // 모델 크기 조절 (필요한 경우)
+    gltf.scene.scale.set(0.5, 0.5, 0.5);
+    function animate(){
+      requestAnimationFrame(animate) //1초에 60번 실행됨.
+
+      //회전
+      gltf.scene.rotation.y += 0.010;
+      renderer.render(scene,camera);  
+  }
+    // 애니메이션 시작
     animate();
   },
-  function (xhr) {
+  (xhr) => {
     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
   },
-  function (error) {
+  (error) => {
     console.error(error);
   }
 );
 
-const ambientLight = new THREE.AmbientLight(0xdddddd);
+const ambientLight = new THREE.AmbientLight(0xFFFFFF);
 scene.add(ambientLight);
 
 // 애니메이션 루프

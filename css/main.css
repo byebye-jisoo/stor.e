@@ -100,12 +100,7 @@ body {
 }
 
 /* 이미지 영역 설정 */
-.content img {
-  background-color: aliceblue;
-  width: 63.65vw; /* 1222px */
-  height: 72.78vh; /* 786px */
-  position: absolute;
-  left: 32.9vw; /* 631px */
-  top: 13.6vh; /* 147px */
+.content {
+  order: 1;
   object-fit: cover;
-}
+} 
