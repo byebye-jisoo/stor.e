@@ -24,7 +24,7 @@ html {
   top: 33.43vh;
   font-family: "Helvetica";
   font-size: 1.7vh;
-  margin-bottom: 3vh;
+  margin-bottom: 1.7vh;
 }
 
 .container img {
@@ -33,7 +33,7 @@ html {
 }
 
 .container img:nth-of-type(1) {
-  margin-bottom: 10vh;
+  margin-bottom: 10.1vh;
   background-color: aliceblue;
 }
 
@@ -47,29 +47,79 @@ html {
   left: 50%;
   transform: translateX(-50%);
   width: 84.6vw;
-  height: 100vh;
+  height: auto;
   font-family: "Helvetica";
   background-color: white;
 }
 
 #input {
-  font-size: 1.4vh;
 }
 
 .line {
-  width: 30%;
+  width: 31%;
   margin-left: 0vw;
 }
 
 #name {
-  width: 100%;
+  width: 30%;
+  margin-top: 3vh;
   border: none;
+  font-size: 1.4vh;
 }
 
 #contents {
   width: 100%;
-  height: calc(1.4vh * 3);
+  height: 10vh;
   margin-top: 3vh;
   border: none;
   resize: none;
+  font-family: "Helvetica";
+  font-size: 1.4vh;
+}
+
+/* 기본 스타일 */
+button[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* 버튼 패딩 */
+  border-radius: 10vw; /* 모서리를 부드럽게 */
+  cursor: pointer; /* 마우스 오버 시 포인터 표시 */
+  font-size: 1.3vh;
+}
+
+.guestList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 요소 */
+  gap: 3%; /* 요소 간 간격 */
+  margin-top: 8vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* 날짜와 이름을 양쪽으로 정렬 */
+  align-items: center;
+  font-size: 1.4vh;
+}
+
+.guestDate {
+  color: gray;
+}
+
+.guestName {
+  font-weight: bold;
+  text-align: right; /* 내용과 간격 추가 */
+}
+
+.divider {
+  width: 100%; /* 구분선 너비 */
+  margin: 0;
+  border: 0;
+  border-top: 1px solid black; /* 구분선 스타일 */
+}
+
+.guestContents {
+  line-height: 1.5; /* 내용 줄 간격 */
+  font-size: 1.4vh;
+  margin-bottom: 7vh;
 }

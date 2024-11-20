@@ -41,3 +41,53 @@ html {
   height: 10vh;
   background-color: white;
 }
+
+.scrollerLayer {
+  position: fixed;
+  top: calc(9vh + 81.3vh);
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.scroller {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+  width: 10px;
+  margin: 3vh auto;
+  justify-content: center;
+}
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.circle {
+  width: 10px;
+  aspect-ratio: 1 / 1;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.barContainer {
+  display: flex;
+  position: fixed; /* 화면에 고정 */
+  justify-content: flex-start;
+  top: 93.84vh; /* 세로 중앙 */
+  left: 50%; /* 가로 중앙 */
+  transform: translate(-50%, -50%);
+  width: 70px;
+  transition: justify-content 0.5s ease;
+}
+
+.bar {
+  width: 30px;
+  height: 11px;
+  border-radius: 2vh;
+  background-color: black;
+}
