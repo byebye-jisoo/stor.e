@@ -17,7 +17,7 @@
 
 /* 기본 글꼴, 배경 및 텍스트 색상 */
 body {
-  background-color: black;
+  background-color: black; 
   color: white;
   display: flex;
   justify-content: center;
@@ -33,6 +33,12 @@ body {
   display: flex;
   position: relative;
   overflow: visible;
+}
+
+/* 이미지 영역 설정 */
+.content {
+  position: relative;
+  object-fit: cover;
 }
 
 /* 사이드바 설정 */
@@ -99,8 +105,3 @@ body {
   color: black;
 }
 
-/* 이미지 영역 설정 */
-.content {
-  order: 1;
-  object-fit: cover;
-}

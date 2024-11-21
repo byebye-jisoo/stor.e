@@ -24,10 +24,10 @@ content.appendChild(renderer.domElement);
 
 // content 요소 스타일 설정
 content.style.position = "absolute";
-content.style.left = "32.9vw";
-content.style.top = "13.6vh";
-content.style.width = "63.65vw";
-content.style.height = "72.78vh";
+ content.style.left = "22vw"; //"32.9vw"
+// content.style.top = "13.6vh";
+content.style.width = "80vw"; //"63.65vw"
+// content.style.height = "72.78vh";
 
 // GLTFLoader 생성 및 glTF 파일 로드
 const loader = new GLTFLoader();
@@ -117,3 +117,4 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // 부드러운 이동을 위한 감쇠 효과
 controls.dampingFactor = 0.25;
 controls.screenSpacePanning = false;
+
