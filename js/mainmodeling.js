@@ -22,9 +22,6 @@ const content = document.getElementById("content");
 renderer.setSize(content.clientWidth, content.clientHeight);
 content.appendChild(renderer.domElement);
 
-// 렌더러를 content 요소에 추가
-content.appendChild(renderer.domElement);
-
 // content 요소 스타일 설정
 content.style.position = "absolute";
 content.style.left = "32.9vw";
@@ -35,24 +32,44 @@ content.style.height = "72.78vh";
 // GLTFLoader 생성 및 glTF 파일 로드
 const loader = new GLTFLoader();
 const url = "../img/resources/modeling.glb";
+
+// Pivot 생성
+const pivot = new THREE.Object3D(); // 회전 중심을 위한 Object3D 생성
+scene.add(pivot); // Pivot을 Scene에 추가
+
 loader.load(
   url,
   (gltf) => {
-    scene.add(gltf.scene);
+    const model = gltf.scene;
 
-    // 모델 크기 조절 (필요한 경우)
-    gltf.scene.scale.set(0.45, 0.45, 0.45);
-    gltf.scene.position.set(0, -30, 0);
+    // 모델 크기 조절
+    model.scale.set(0.45, 0.45, 0.45);
+
+    // 모델의 바운딩 박스 계산
+    const box = new THREE.Box3().setFromObject(model);
+    const center = new THREE.Vector3();
+    box.getCenter(center); // 모델의 중심 좌표 계산
+    console.log("Model Center:", center);
+
+    // 모델 중심을 (0, 0, 0)으로 이동
+    model.position.sub(center);
+
+    // Pivot에 모델 추가
+    pivot.add(model);
+
+    // 애니메이션 함수
     function animate() {
-      requestAnimationFrame(animate); //1초에 60번 실행됨.
+      requestAnimationFrame(animate);
 
-      // 컨트롤러 업데이터
+      // Pivot을 기준으로 회전
+      pivot.rotation.y += 0.01;
+
+      // OrbitControls 업데이트
       controls.update();
 
-      //회전
-      gltf.scene.rotation.y += 0.01;
       renderer.render(scene, camera);
     }
+
     // 애니메이션 시작
     animate();
   },
@@ -64,16 +81,11 @@ loader.load(
   }
 );
 
+// Ambient Light 추가
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(ambientLight);
 
-// 애니메이션 루프
-function animate() {
-  requestAnimationFrame(animate);
-  renderer.render(scene, camera);
-}
-
-// DOMContentLoaded에서 content 크기 다시 읽기 (바로 뜨게)
+// DOMContentLoaded에서 content 크기 다시 읽기
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
   const width = content.clientWidth;
@@ -100,7 +112,7 @@ window.addEventListener("resize", () => {
   renderer.setSize(width, height);
 });
 
-// orbit control
+// OrbitControls 추가
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // 부드러운 이동을 위한 감쇠 효과
 controls.dampingFactor = 0.25;
