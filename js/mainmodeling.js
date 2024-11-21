@@ -73,7 +73,7 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-// DOMContentLoaded에서 content 크기 다시 읽기 (바로 뜨게 하기)
+// DOMContentLoaded에서 content 크기 다시 읽기 (바로 뜨게)
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
   const width = content.clientWidth;
