@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 // Three.js 필수 요소
 const scene = new THREE.Scene();
@@ -35,22 +35,24 @@ content.style.height = "72.78vh";
 // GLTFLoader 생성 및 glTF 파일 로드
 const loader = new GLTFLoader();
 const url = "../img/resources/modeling.glb";
-loader.load(url, (gltf) => {
+loader.load(
+  url,
+  (gltf) => {
     scene.add(gltf.scene);
 
     // 모델 크기 조절 (필요한 경우)
     gltf.scene.scale.set(0.45, 0.45, 0.45);
     gltf.scene.position.set(0, -30, 0);
-    function animate(){
-      requestAnimationFrame(animate) //1초에 60번 실행됨.
+    function animate() {
+      requestAnimationFrame(animate); //1초에 60번 실행됨.
 
       // 컨트롤러 업데이터
       controls.update();
 
       //회전
-      gltf.scene.rotation.y += 0.010;
-      renderer.render(scene,camera);  
-  }
+      gltf.scene.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
     // 애니메이션 시작
     animate();
   },
@@ -62,7 +64,7 @@ loader.load(url, (gltf) => {
   }
 );
 
-const ambientLight = new THREE.AmbientLight(0xFFFFFF);
+const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(ambientLight);
 
 // 애니메이션 루프
@@ -70,6 +72,19 @@ function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
+
+// DOMContentLoaded에서 content 크기 다시 읽기 (바로 뜨게 하기)
+document.addEventListener("DOMContentLoaded", () => {
+  const content = document.getElementById("content");
+  const width = content.clientWidth;
+  const height = content.clientHeight;
+
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+
+  init(); // Three.js 초기화
+});
 
 // 창 크기 조절에 따른 렌더러 및 카메라 업데이트
 window.addEventListener("resize", () => {
