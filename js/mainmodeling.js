@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Three.js 필수 요소
 const scene = new THREE.Scene();
@@ -39,8 +40,12 @@ loader.load(url, (gltf) => {
 
     // 모델 크기 조절 (필요한 경우)
     gltf.scene.scale.set(0.45, 0.45, 0.45);
+    gltf.scene.position.set(0, -30, 0);
     function animate(){
       requestAnimationFrame(animate) //1초에 60번 실행됨.
+
+      // 컨트롤러 업데이터
+      controls.update();
 
       //회전
       gltf.scene.rotation.y += 0.010;
@@ -80,10 +85,8 @@ window.addEventListener("resize", () => {
   renderer.setSize(width, height);
 });
 
-// export 하는 부분 추가
-export function init() {
-  // 초기화 로직 (기존 코드의 일부를 이동)
-  const scene = new THREE.Scene();
-  // ... 나머지 초기화 코드
-  animate();
-}
+// orbit control
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; // 부드러운 이동을 위한 감쇠 효과
+controls.dampingFactor = 0.25;
+controls.screenSpacePanning = false;
