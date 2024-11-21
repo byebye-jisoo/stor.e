@@ -30,6 +30,18 @@
       </div>
       <img src="../img/archiving/archiving02.jpg" />
     </div>
+    
+    <form id="visitorForm">
+      <div class="text-layer">방명록</div>
+      <hr class="line">
+      <div class="input">
+        <input type="text" id="name" placeholder="이름 입력" required />
+        <textarea id="contents" placeholder="한 마디 적어주세요 ^^" required></textarea>
+        <button type="submit">등록하기</button>
+      </div>
+      <!-- 작성된 방명록들 -->
+      <div class="guestList"></div>
+    </form>
 
       <!-- 빨간 원 -->
       <div class="red-circle" id="redCircle">
@@ -43,7 +55,8 @@
       </div>
     </div>
 
-    <script src="/js/scroll.js"></script>
+    <script src="../js/archiving.js"></script>
+    <script src="../js/scroll.js"></script>
     <script src="../js/popup.js"></script>
   </body>
 </html>

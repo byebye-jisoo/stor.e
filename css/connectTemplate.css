@@ -11,6 +11,16 @@ html {
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
+.back {
+  position: fixed;
+  top: 15vh;
+  left: 2.6vw;
+  font-family: "Helvetica";
+  font-size: 1.85vh;
+  color: black;
+  z-index: 100;
+}
+
 .left {
   position: fixed;
   top: 15vh;
