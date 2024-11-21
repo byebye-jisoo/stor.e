@@ -9,7 +9,7 @@ const camera = new THREE.PerspectiveCamera(
   1, // 카메라 시작 범위
   10000 // 카메라 끝 범위
 );
-camera.position.set(0, 0, 150);
+camera.position.set(0, 30, 145);
 const renderer = new THREE.WebGLRenderer();
 
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -38,7 +38,7 @@ loader.load(url, (gltf) => {
     scene.add(gltf.scene);
 
     // 모델 크기 조절 (필요한 경우)
-    gltf.scene.scale.set(0.5, 0.5, 0.5);
+    gltf.scene.scale.set(0.45, 0.45, 0.45);
     function animate(){
       requestAnimationFrame(animate) //1초에 60번 실행됨.
 
@@ -79,3 +79,11 @@ window.addEventListener("resize", () => {
 
   renderer.setSize(width, height);
 });
+
+// export 하는 부분 추가
+export function init() {
+  // 초기화 로직 (기존 코드의 일부를 이동)
+  const scene = new THREE.Scene();
+  // ... 나머지 초기화 코드
+  animate();
+}

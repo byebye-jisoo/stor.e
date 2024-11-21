@@ -38,5 +38,13 @@
     <!-- JavaScript 파일 연결 -->
     <script src="../js/popup.js"></script>
     <script type="module" src="/js/mainmodeling.js"></script>
+    <script type="module">
+      import { init } from './js/mainmodeling.js';
+    
+      // DOMContentLoaded 이벤트 리스너 추가
+      document.addEventListener('DOMContentLoaded', () => {
+        init();
+      });
+    </script>
   </body>
 </html>
