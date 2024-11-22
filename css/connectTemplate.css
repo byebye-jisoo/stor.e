@@ -1,6 +1,7 @@
 /* 기본 스타일 초기화 */
 body,
 html {
+  background-color: #fafafa;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,7 +73,7 @@ html {
 .layer-text {
   font-family: "Helvetica"; /* 기존 폰트 유지 */
   font-size: 1.39vh; /* 기존 텍스트 크기 유지 */
-  color: black; /* 기존 텍스트 색상 유지 */
+  color: #111111; /* 기존 텍스트 색상 유지 */
   margin-bottom: 3vh; /* 기존 하단 여백 유지 */
   margin-left: 0; /* 이미지와 텍스트 왼쪽 정렬 */
 }

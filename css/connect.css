@@ -1,6 +1,7 @@
 /* 기본 스타일 초기화 */
 body,
 html {
+  background-color: #fafafa;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

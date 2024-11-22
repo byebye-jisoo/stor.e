@@ -22,7 +22,8 @@
 
 /* 빨간 원 중앙의 느낌표 */
 .red-circle .exclamation-mark {
-  color: black;
+  background-color: red;
+  color: #111111;
   font-family: "Swiss";
   font-size: 1vw; /* 29px */
   font-weight: 500;
@@ -42,7 +43,7 @@
   top: 87.4vh;
   transform: translate(-50%, -50%);
   background-color: red;
-  color: white;
+  color: #fafafa;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +58,7 @@
   width: 0.57vw; /* 11px */
   height: 1.67vh; /* 18px */
   background-color: transparent;
-  color: black;
+  color: #111111;
   right: 0.52vw; /* 10px */
   top: 0.93vh; /* 10px */
   font-size: 0.83vw; /* 16px */
@@ -70,7 +71,7 @@
 .popup .popup-text {
   font-family: "Helvetica";
   font-size: 0.75vw; /* 16px */
-  color: white;
+  color: #fafafa;
   text-align: center;
   line-height: 1.5;
 }
