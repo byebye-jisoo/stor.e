@@ -82,8 +82,12 @@ loader.load(
 );
 
 // Ambient Light 추가
-const ambientLight = new THREE.AmbientLight(0xffffff);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 10);
+directionalLight.position.set(1, 1, 10);
+scene.add(directionalLight);
 
 // DOMContentLoaded에서 content 크기 다시 읽기
 document.addEventListener("DOMContentLoaded", () => {
