@@ -10,7 +10,7 @@ const camera = new THREE.PerspectiveCamera(
   1, // 카메라 시작 범위
   10000 // 카메라 끝 범위
 );
-camera.position.set(0, 40, 145);
+camera.position.set(0, 55, 150);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -24,17 +24,17 @@ document.getElementById("content").appendChild(renderer.domElement);
 // OrbitControls 추가 (카메라 조작)
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // 부드러운 이동 효과
-controls.dampingFactor = 0.25;
+controls.dampingFactor = 0.15;
 controls.screenSpacePanning = false;
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1); // 매우 밝게 설정
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 40);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 30);
 directionalLight.position.set(250,30,150);
 scene.add(directionalLight);
 
-const directionalLightUnder = new THREE.DirectionalLight(0xffffff, 40);
+const directionalLightUnder = new THREE.DirectionalLight(0xffffff, 30);
 directionalLightUnder.position.set(1,-1,-5);
 scene.add(directionalLightUnder);
 
