@@ -27,17 +27,28 @@ controls.enableDamping = true; // 부드러운 이동 효과
 controls.dampingFactor = 0.25;
 controls.screenSpacePanning = false;
 
-// Ambient Light 추가
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 1); // 매우 밝게 설정
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(1, 1, 10);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 40);
+directionalLight.position.set(250,30,150);
 scene.add(directionalLight);
+
+const directionalLightUnder = new THREE.DirectionalLight(0xffffff, 40);
+directionalLightUnder.position.set(1,-1,-5);
+scene.add(directionalLightUnder);
+
+const dlhelper = new THREE.DirectionalLightHelper(directionalLight, 0.5);
+// scene.add(dlhelper);
 
 // Pivot 생성
 const pivot = new THREE.Object3D();
 scene.add(pivot);
+
+// Point Light 추가
+const pointLight = new THREE.PointLight(0xffffff, 1000, 10000);
+pointLight.position.set(5, 50, 1); // 모델 내부에 위치
+pivot.add(pointLight); // Pivot에 추가하여 함께 회전
 
 // GLTFLoader로 모델 로드
 const loader = new GLTFLoader();
