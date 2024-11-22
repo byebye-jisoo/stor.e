@@ -77,7 +77,7 @@ body {
   height: 3.89vh; /* 42px */
   line-height: 3.89vh;
   text-align: center;
-  border: 0.07vw solid #111111; /* 1px */
+  border: 0.15vw solid #111111; /* 1px */
   border-radius: 2vw; /* 20px */
   color: #111111;
   text-decoration: none;

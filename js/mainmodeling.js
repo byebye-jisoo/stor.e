@@ -10,7 +10,7 @@ const camera = new THREE.PerspectiveCamera(
   1, // 카메라 시작 범위
   10000 // 카메라 끝 범위
 );
-camera.position.set(0, 55, 150);
+camera.position.set(0, 10, 150);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -31,11 +31,11 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 1); // 매우 밝게 설�
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 30);
-directionalLight.position.set(250,30,150);
+directionalLight.position.set(250, 30, 150);
 scene.add(directionalLight);
 
 const directionalLightUnder = new THREE.DirectionalLight(0xffffff, 30);
-directionalLightUnder.position.set(1,-1,-5);
+directionalLightUnder.position.set(1, -1, -5);
 scene.add(directionalLightUnder);
 
 const dlhelper = new THREE.DirectionalLightHelper(directionalLight, 0.5);
@@ -60,7 +60,7 @@ loader.load(
     const model = gltf.scene;
 
     // 모델 크기 조정
-    model.scale.set(0.75, 0.75, 0.75);
+    model.scale.set(0.9, 0.9, 0.9);
 
     // 모델의 Bounding Box 계산
     const box = new THREE.Box3().setFromObject(model);
@@ -74,7 +74,7 @@ loader.load(
     pivot.add(model);
 
     // Pivot 자체를 화면 우측으로 이동
-    pivot.position.set(35, 0, 0); // x축으로 50만큼 이동
+    pivot.position.set(40, -40, 0); // x축으로 50만큼 이동
 
     // Pivot을 장면에 추가
     scene.add(pivot);
