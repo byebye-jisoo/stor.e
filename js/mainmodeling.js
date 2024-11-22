@@ -10,11 +10,15 @@ const camera = new THREE.PerspectiveCamera(
   1, // 카메라 시작 범위
   10000 // 카메라 끝 범위
 );
-camera.position.set(0, 30, 145);
+camera.position.set(0, 40, 145);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.setSize(window.innerWidth, window.innerHeight);
+
+// 배경색을 흰색으로 설정
+renderer.setClearColor(0xfafafa, 1);
+
 document.getElementById("content").appendChild(renderer.domElement);
 
 // OrbitControls 추가 (카메라 조작)
@@ -45,23 +49,31 @@ loader.load(
     const model = gltf.scene;
 
     // 모델 크기 조정
-    model.scale.set(0.45, 0.45, 0.45);
+    model.scale.set(0.75, 0.75, 0.75);
 
-    // 모델의 중심을 계산하고 이동
+    // 모델의 Bounding Box 계산
     const box = new THREE.Box3().setFromObject(model);
     const center = new THREE.Vector3();
     box.getCenter(center);
+
+    // 모델 위치를 Pivot 중심으로 이동
     model.position.sub(center);
 
     // Pivot에 모델 추가
     pivot.add(model);
 
+    // Pivot 자체를 화면 우측으로 이동
+    pivot.position.set(35, 0, 0); // x축으로 50만큼 이동
+
+    // Pivot을 장면에 추가
+    scene.add(pivot);
+
     // 애니메이션 함수
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Pivot 회전
-      pivot.rotation.y += 0.01;
+      // Pivot 회전 (중심 기준 회전)
+      pivot.rotation.y += 0.005;
 
       // 렌더링
       renderer.render(scene, camera);

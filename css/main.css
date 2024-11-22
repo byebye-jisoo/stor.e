@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #fafafa;
 }
 
 @font-face {
@@ -17,8 +18,8 @@
 
 /* 기본 글꼴, 배경 및 텍스트 색상 */
 body {
-  background-color: black;
-  color: white;
+  background-color: #fafafa;
+  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +60,7 @@ body {
   position: absolute;
   left: 3.5vw; /* 50px */
   top: 13.6vh; /* 133px */
-  color: white;
+  color: #1a1a1a;
 }
 
 /* 네비게이션 메뉴 */
@@ -76,9 +77,9 @@ body {
   height: 3.89vh; /* 42px */
   line-height: 3.89vh;
   text-align: center;
-  border: 0.07vw solid white; /* 1px */
+  border: 0.07vw solid #1a1a1a; /* 1px */
   border-radius: 2vw; /* 20px */
-  color: white;
+  color: #1a1a1a;
   text-decoration: none;
   font-family: "SwisRoman";
   font-size: 1.05vw; /* 24px */
@@ -106,6 +107,6 @@ body {
 }
 
 .sidebar nav a:hover {
-  background-color: white;
-  color: black;
+  background-color: #1a1a1a;
+  color: #fafafa;
 }

@@ -15,7 +15,7 @@
   left: 0;
   width: 100%; /* 화면 너비에 맞게 100%로 설정 */
   height: 9vh; /* 182px을 1080px 기준으로 비율 변환 */
-  background-color: white;
+  background-color: #fafafa;
   border: solid #000;
   border-width: 0.1vh 0px 0px 0px;
   display: flex;
