@@ -1,6 +1,8 @@
-@font-face {
-  font-family: "SwisRoman";
-  src: url("../font/Swis721BTRoman.ttf") format("truetype");
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -8,61 +10,40 @@
   src: url("../font/Alias-Bold.ttf") format("truetype");
 }
 
-/* 고정된 헤더 스타일 */
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* 화면 너비에 맞게 100%로 설정 */
-  height: 9vh; /* 182px을 1080px 기준으로 비율 변환 */
-  background-color: #fafafa;
-  border: solid #000;
-  border-width: 0.1vh 0px 0px 0px;
-  display: flex;
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Light.otf") format("opentype");
+}
+
+/* 헤더 박스 */
+.header {
+  position: absolute;
+  top: 0vh;
+  width: 94.896vw;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  z-index: 1000;
-  font-family: "SwisRoman";
+}
+
+/* 헤더 그리드 레이어 */
+.headerContainer {
+  display: grid;
+  position: absolute;
+  grid-template-columns: 56.56vw 8.645vw 8.645vw 8.645vw 8.645vw;
+  grid-template-rows: 1fr;
+  gap: 0.938vw;
+
+  z-index: 10;
+}
+
+.title {
+  display: flex;
+  top: 3vh;
+  font-family: "Alias";
+  font-size: 2.214vw;
+  color: #111111;
 }
 
 .menu {
-  position: absolute;
-  font-family: "SwisRoman";
-  font-size: 1.25vw;
+  font-family: "Pretendard";
   color: #111111;
-  cursor: pointer;
-  top: 30%;
-  text-decoration: none;
-}
-
-.about {
-  left: 2.6vw;
-}
-
-.connect {
-  left: 10.88vw;
-}
-
-.modeling {
-  left: 20.63vw;
-}
-
-.archiving {
-  left: 91.3vw;
-}
-
-/* 제목(홈버튼) */
-.project-text {
-  position: absolute;
-  width: 7.55vw; /* 145px을 1920px 기준으로 비율 변환 */
-  height: 40%; /* 43px을 1080px 기준으로 비율 변환 */
-  font-family: "Alias";
-  font-size: 1.875vw; /* 36px을 1920px 기준으로 비율 변환 */
-  color: #111111;
-  line-height: 3.98vh;
-  letter-spacing: -0.02em;
-  transform: translateX(-50%) rotate(0.04deg);
-  text-align: center;
-  left: 50%;
-  text-decoration: none;
 }
