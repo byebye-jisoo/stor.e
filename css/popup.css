@@ -12,7 +12,7 @@
 .red-circle {
   width: 1.7vw; /* 29px */
   aspect-ratio: 1 / 1;
-  background-color: red;
+  background-color: #111111;
   border-radius: 50%;
   position: fixed;
   left: 96.5vw;
@@ -22,8 +22,8 @@
 
 /* 빨간 원 중앙의 느낌표 */
 .red-circle .exclamation-mark {
-  background-color: red;
-  color: #111111;
+  background-color: #111111;
+  color: white;
   font-family: "Swiss";
   font-size: 1vw; /* 29px */
   font-weight: 500;
@@ -42,8 +42,8 @@
   left: 93.2vw;
   top: 87.4vh;
   transform: translate(-50%, -50%);
-  background-color: red;
-  color: #fafafa;
+  background-color: #111111;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@
   width: 0.57vw; /* 11px */
   height: 1.67vh; /* 18px */
   background-color: transparent;
-  color: #111111;
+  color: white;
   right: 0.52vw; /* 10px */
   top: 0.93vh; /* 10px */
   font-size: 0.83vw; /* 16px */
