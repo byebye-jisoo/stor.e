@@ -10,308 +10,76 @@
   </head>
   <body>
     <!-- 고정된 헤더 -->
-    <header class="fixed-header">
-      <nav class="menu">
-        <a href="../html/about.html" class="menu about">about</a>
-        <a href="../html/connect.html" class="menu connect">connect</a>
-        <a href="../html/modeling.html" class="menu modeling">modeling</a>
-        <a href="../html/archiving.html" class="menu archiving">archiving</a>
-      </nav>
-      <a href="../index.html" class="project-text">stor.e</a>
+    <header class="header">
+      <div class="headerContainer">
+        <a href="/index.html" class="headerTitle">stor.e</a>
+        <a href="../html/about.html" class="headerMenu move">ABOUT</a>
+        <a href="../html/connect.html" class="headerMenu now">CONNECT</a>
+        <a href="../html/modeling.html" class="headerMenu move">MODELING</a>
+        <a href="../html/archiving.html" class="headerMenu move">ARCHIVING</a>
+      </div>
     </header>
 
     <!-- 스크롤 가능한 섹션들 -->
-    <div class="section-container">
-      <div class="text-layer">
-        가구에 담긴 다양한 사람들의 이야기를 모아봤다. 애장품속에 담긴 이야기를
-        들여다 보자. 어쩌구
-      </div>
-
-      <!-- 큰 레이어 -->
-      <div class="large-layer">
-        <!-- 첫 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect01">
-            <img
-              src="../img/connect/connect01.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect01Change.jpg"
-            />
-            <div class="layer-text">커넥트 1</div>
-          </a>
-        </div>
-        <!-- 두 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect02">
-            <img
-              src="../img/connect/connect02.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect02Change.jpg"
-            />
-            <div class="layer-text">커넥트 2</div></a
-          >
-        </div>
-        <!-- 세 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect03"
-            ><img
-              src="../img/connect/connect03.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect03Change.jpg"
-            />
-            <div class="layer-text">커넥트 3</div>
-          </a>
+    <div class="sectionContainer">
+      <!-- 소개란 -->
+      <div class="introduceContainer">
+        <div class="title">CONNECT PAGE</div>
+        <div class="detail">
+          자취하는 대학생들의 애장품을 가구에 담아보았다.<br />
+          모듈 결합 방식에 대해 설명한 후 자유롭게 가구를 채울수 있도록 시간을
+          주고<br />
+          그 과정을 기록하고 물건에 대한 이야기를 나눴다.<br />
         </div>
       </div>
 
-      <div class="large-layer">
-        <!-- 네 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect04"
-            ><img
-              src="../img/connect/connect04.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect04Change.jpg"
-            />
-            <div class="layer-text">커넥트 4</div>
+      <!-- 그리드 레이어 -->
+      <div class="connectLargeGrid">
+        <!-- 4x1 그리드 -->
+        <div class="connectSmallGrid">
+          <!-- 첫 번째 커넥터 -->
+          <a href="../html/connectTemplate.html">
+            <div class="connectElement">
+              <img
+                src="../img/connect/connect01.jpg"
+                class="elementImage"
+                data-hover="../img/connect/connect01Change.jpg"
+              />
+              <div class="elementText">커넥트 1</div>
+            </div>
           </a>
-        </div>
-        <!-- 다섯 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect05"
-            ><img
-              src="../img/connect/connect05.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect05Change.jpg"
-            />
-            <div class="layer-text">커넥트 5</div>
+          <!-- 두 번째 커넥터 -->
+          <a href="../html/connectTemplate.html">
+            <div class="connectElement">
+              <img
+                src="../img/connect/connect01.jpg"
+                class="elementImage"
+                data-hover="../img/connect/connect01Change.jpg"
+              />
+              <div class="elementText">커넥트 1</div>
+            </div>
           </a>
-        </div>
-        <!-- 여섯 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect06"
-            ><img
-              src="../img/connect/connect06.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect06Change.jpg"
-            />
-            <div class="layer-text">커넥트 6</div>
+          <!-- 세 번째 커넥터 -->
+          <a href="../html/connectTemplate.html">
+            <div class="connectElement">
+              <img
+                src="../img/connect/connect01.jpg"
+                class="elementImage"
+                data-hover="../img/connect/connect01Change.jpg"
+              />
+              <div class="elementText">커넥트 1</div>
+            </div>
           </a>
-        </div>
-      </div>
-
-      <div class="large-layer">
-        <!-- 일곱 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect07">
-            <img
-              src="../img/connect/connect07.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect07Change.jpg"
-            />
-            <div class="layer-text">커넥트 7</div></a
-          >
-        </div>
-        <!-- 여덟 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect08"
-            ><img
-              src="../img/connect/connect08.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect08Change.jpg"
-            />
-            <div class="layer-text">커넥트 8</div>
-          </a>
-        </div>
-        <!-- 아홉 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect09"
-            ><img
-              src="../img/connect/connect09.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect09Change.jpg"
-            />
-            <div class="layer-text">커넥트 9</div>
-          </a>
-        </div>
-      </div>
-
-      <div class="large-layer">
-        <!-- 열 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect10">
-            <img
-              src="../img/connect/connect10.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect10Change.jpg"
-            />
-            <div class="layer-text">커넥트 10</div></a
-          >
-        </div>
-        <!-- 열한 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect11">
-            <img
-              src="../img/connect/connect11.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect11Change.jpg"
-            />
-            <div class="layer-text">커넥트 11</div></a
-          >
-        </div>
-        <!-- 열두 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect12"
-            ><img
-              src="../img/connect/connect12.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect12Change.jpg"
-            />
-            <div class="layer-text">커넥트 12</div>
-          </a>
-        </div>
-      </div>
-
-      <div class="large-layer">
-        <!-- 열세 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect13"
-            ><img
-              src="../img/connect/connect13.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect13Change.jpg"
-            />
-            <div class="layer-text">커넥트 13</div>
-          </a>
-        </div>
-        <!-- 열네 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect14">
-            <img
-              src="../img/connect/connect14.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect14Change.jpg"
-            />
-            <div class="layer-text">커넥트 14</div></a
-          >
-        </div>
-        <!-- 열다섯 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect15"
-            ><img
-              src="../img/connect/connect15.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect15Change.jpg"
-            />
-            <div class="layer-text">커넥트 15</div>
-          </a>
-        </div>
-      </div>
-
-      <div class="large-layer">
-        <!-- 열여섯 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect16"
-            ><img
-              src="../img/connect/connect16.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect16Change.jpg"
-            />
-            <div class="layer-text">커넥트 16</div>
-          </a>
-        </div>
-        <!-- 열일곱 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect17"
-            ><img
-              src="../img/connect/connect17.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect17Change.jpg"
-            />
-            <div class="layer-text">커넥트 17</div>
-          </a>
-        </div>
-        <!-- 열여덟 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect18"
-            ><img
-              src="../img/connect/connect18.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect18Change.jpg"
-            />
-            <div class="layer-text">커넥트 18</div>
-          </a>
-        </div>
-      </div>
-
-      <div class="large-layer">
-        <!-- 열아홉 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect19">
-            <img
-              src="../img/connect/connect19.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect19Change.jpg"
-            />
-            <div class="layer-text">커넥트 19</div></a
-          >
-        </div>
-        <!-- 스무 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect20">
-            <img
-              src="../img/connect/connect20.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect20Change.jpg"
-            />
-            <div class="layer-text">커넥트 20</div></a
-          >
-        </div>
-        <!-- 스물한 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect21">
-            <img
-              src="../img/connect/connect21.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect21Change.jpg"
-            />
-            <div class="layer-text">커넥트 21</div></a
-          >
-        </div>
-      </div>
-
-      <div class="large-layer">
-        <!-- 스물두 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect22"
-            ><img
-              src="../img/connect/connect22.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect22Change.jpg"
-            />
-            <div class="layer-text">커넥트 22</div>
-          </a>
-        </div>
-        <!-- 스물세 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect23">
-            <img
-              src="../img/connect/connect23.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect23Change.jpg"
-            />
-            <div class="layer-text">커넥트 23</div></a
-          >
-        </div>
-        <!-- 스물네 번째 작은 레이어 -->
-        <div class="small-layer">
-          <a href="../html/connectTemplate.html?page=connect24">
-            <img
-              src="../img/connect/connect24.jpg"
-              class="layer-image"
-              data-hover="../img/connect/connect24Change.jpg"
-            />
-            <div class="layer-text">커넥트 24</div>
+          <!-- 네 번째 커넥터 -->
+          <a href="../html/connectTemplate.html">
+            <div class="connectElement">
+              <img
+                src="../img/connect/connect01.jpg"
+                class="elementImage"
+                data-hover="../img/connect/connect01Change.jpg"
+              />
+              <div class="elementText">커넥트 1</div>
+            </div>
           </a>
         </div>
       </div>

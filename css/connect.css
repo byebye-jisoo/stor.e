@@ -8,66 +8,57 @@ html {
 }
 
 @font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Light.otf") format("opentype");
+}
+
+@font-face {
   font-family: "Helvetica";
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
-/* 레이어 스타일 */
-.text-layer {
-  font-family: "Helvetica";
-  font-size: 1.3vh;
+/* 소개란 */
+.introduceContainer {
   position: relative;
-  display: flex;
-  margin-top: 9.3vh;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  gap: 1.35vw;
-  width: 41.2vw; /* 894px을 1920px 기준으로 비율 변환 */
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  left: 50%; /* 화면 중앙 기준으로 위치 */
+  transform: translateX(-50%); /* 중앙 정렬 */
+  margin-top: 15.46vh;
+  width: 75.78vw;
+  height: 11.94vh;
+  grid-template-columns: 18.06vw 56.43vw;
 }
 
-/* 큰 레이어 */
-.large-layer {
-  top: 33.43vh;
+.connectLargeGrid {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  left: 50%; /* 화면 중앙 기준으로 위치 */
+  transform: translateX(-50%); /* 중앙 정렬 */
+  width: 75.76vw;
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-a {
-  text-decoration: none;
-}
-
-/* 작은 레이어 */
-.small-layer {
-  width: 27.3vw; /* 449px을 큰 레이어 너비 기준으로 비율 변환 */
-  height: 100%; /* 큰 레이어 높이만큼 차지 */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.8vw;
-  box-sizing: border-box;
-  display: inline-block;
-}
-
-/* 이미지 스타일 */
-.layer-image {
+.connectSmallGrid {
+  position: relative;
+  display: grid;
   width: 100%;
-  height: 100%; /* 이미지 높이 */
-  background-color: lightgray;
-  object-fit: cover;
-  transition: all 0.3s ease;
+  grid-template-columns: repeat(4, 18.06vw);
+  gap: 1.17vw;
 }
 
-/* 텍스트 스타일 */
-.layer-text {
-  font-size: 1.85vh; /* 20px을 1080px 기준으로 비율 변환 */
-  font-family: "Helvetica";
-  color: black;
-  text-align: left;
-  align-self: flex-start; /* 왼쪽 정렬 추가 */
-  transform: rotate(0.04deg);
+.connectElement {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 57.41vh 11.94vh;
+}
+
+.elementImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.a {
+  text-decoration-line: none;
 }

@@ -1,5 +1,5 @@
 // 모든 이미지 요소 선택
-const images = document.querySelectorAll(".layer-image");
+const images = document.querySelectorAll(".elementImage");
 
 // 각 이미지에 이벤트 추가
 images.forEach((img) => {
