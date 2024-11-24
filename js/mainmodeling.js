@@ -4,6 +4,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
 
 // Three.js 필수 요소 초기화
 const scene = new THREE.Scene();
@@ -18,6 +20,7 @@ camera.position.set(0, 10, 200);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 // 배경색을 흰색으로 설정
 renderer.setClearColor(0x535353, 1);
@@ -74,19 +77,51 @@ const material2 = new THREE.MeshPhysicalMaterial({
   metalness: 0.2
 });
 
-const composer = new EffectComposer(renderer);
-composer.addPass(new RenderPass(scene, camera));
-
-const bloomPass = new UnrealBloomPass(scene, 1.5, 0.2, 0.85); // intensity를 높여 빛 번짐 강도 조절
-composer.addPass(bloomPass);
-
 const sphere2 = new THREE.Mesh(geometry2, material2);
-
-scene.fog = new THREE.Fog(0x535353, 100, 1000);
 
 // 구 위치 설정
 sphere.position.set(-6, 93.3, -6); // PointLight와 같은 높이에 위치
 sphere2.position.set(-6, 93.3, -6);
+
+const params = {
+  threshold: 0.5,
+  strength:1.2,
+  radius: 0.5,
+  exposure: 1
+}
+
+const renderScene = new RenderPass(scene, camera);
+
+const bloomPass = new UnrealBloomPass(scene, 1.5, 0.2, 0.85); // intensity를 높여 빛 번짐 강도 조절
+bloomPass.threshold = params.threshold;
+bloomPass.strength = params.strength;
+bloomPass.radius = params.radius;
+
+const bloomComposer = new EffectComposer(renderer);
+bloomComposer.addPass(renderScene);
+bloomComposer.addPass(bloomPass);
+
+bloomComposer.renderToScreen = false;
+
+const mixPass = new ShaderPass(
+  new THREE.ShaderMaterial({
+    uniforms: {
+      baseTexture: {value: null},
+      bloomTexture: {value: bloomComposer.renderTarget2.texture}
+    },
+    vertexShader: document.getElementById('vertexshader').textContent,
+    fragmentShader: document.getElementById('fragmentshader').textContent
+  }), 'baseTexture'
+);
+
+const finalComposer = new EffectComposer(renderer);
+finalComposer.addPass(renderScene);
+finalComposer.addPass(mixPass);
+
+const outputPass = new OutputPass();
+finalComposer.addPass(outputPass);
+
+scene.fog = new THREE.Fog(0x535353, 100, 1000);
 
 // 장면에 추가
 pivot.add(sphere);
@@ -145,6 +180,9 @@ loader.load(
       // Pivot 회전 (중심 기준 회전)
       pivot.rotation.y += 0.005;
 
+      bloomComposer.render();
+      finalComposer.render();
+
       // 렌더링
       renderer.render(scene, camera);
       
@@ -172,6 +210,8 @@ window.addEventListener("resize", () => {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
   renderer.setSize(width, height);
+  bloomComposer.setSize(width, height);
+  finalComposer.setSize(width, height);
 });
 
 // DOMContentLoaded 이벤트에서 렌더러 초기화
