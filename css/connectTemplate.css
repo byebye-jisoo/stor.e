@@ -14,8 +14,8 @@ html {
 
 .back {
   position: fixed;
-  top: 15vh;
-  left: 2.6vw;
+  top: 82.96vh;
+  left: 2.55vw;
   font-family: "Helvetica";
   font-size: 1.85vh;
   color: black;
@@ -26,54 +26,80 @@ html {
   position: fixed;
   top: 15vh;
   left: 10.88vw;
-  width: 23.39vw;
+  width: 27.76vw;
   height: auto;
   display: inline-block;
 }
 
 .left img {
   width: 100%;
-  height: 73.91vh;
+  height: 69.35vh;
   background-color: lightgray;
   object-fit: cover;
 }
 
-.text {
-  text-align: center;
-  font-size: 1.48vh;
-}
-
+/* 소개란 */
 .right {
-  position: absolute;
-}
-
-.large-layer {
   position: relative;
-  top: 15vh; /* 기존 위치 유지 */
-  left: 41.15vw; /* 기존 위치 유지 */
-  width: 48.27vw; /* 기존 너비 유지 */
+  display: grid;
+  left: 50.52vw;
+  margin-top: 15.46vh;
+  width: 37.34vw;
+  height: 11.94vh;
+  grid-template-columns: 18.06vw 56.43vw;
+}
+
+.introduceContainer {
+}
+
+.introduceTitle {
+  font-family: "Pretendard";
+  font-weight: bold;
+  font-size: 1.25vw;
+}
+
+.introduceDetail {
+  font-family: "Helvetica";
+  font-size: 0.83vw;
+}
+
+.connectLargeGrid {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  left: 50%; /* 화면 중앙 기준으로 위치 */
+  transform: translateX(-50%); /* 중앙 정렬 */
+  width: 75.76vw;
   height: auto;
-  display: grid; /* Grid 레이아웃 활성화 */
-  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개씩 배치 */
-  gap: 20px; /* 요소 간 간격 유지 */
 }
 
-.small-layer {
-  display: flex; /* 내부 요소를 Flex로 유지 */
-  flex-direction: column; /* 세로 정렬 */
-  align-items: flex-start; /* 왼쪽 정렬 */
+.connectSmallGrid {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 18.06vw);
+  gap: 1.17vw;
 }
 
-.layer-image {
-  width: 100%; /* 부모 크기에 맞춤 */
-  aspect-ratio: 4 / 3; /* 가로:세로 비율 유지 */
-  object-fit: cover; /* 이미지 비율 유지 */
+.connectElement {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-rows: auto 11.94vh;
 }
 
-.layer-text {
-  font-family: "Helvetica"; /* 기존 폰트 유지 */
-  font-size: 1.39vh; /* 기존 텍스트 크기 유지 */
-  color: #111111; /* 기존 텍스트 색상 유지 */
-  margin-bottom: 3vh; /* 기존 하단 여백 유지 */
-  margin-left: 0; /* 이미지와 텍스트 왼쪽 정렬 */
+.elementImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.elementText {
+  margin-top: 2.31vh;
+  font-family: "Pretendard";
+  font-size: 0.83vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

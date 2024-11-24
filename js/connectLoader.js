@@ -3,7 +3,6 @@ const pageData = {
   connect01: {
     // 커넥트 1
     leftImage: "/img/connect/connect01.jpg",
-    leftText: "Lorem ipsum dolor sit amet, connect01에 대한 설명.",
     right: [
       { src: "/img/connect/connect01/connect01_01.jpg", text: "애장품 1" },
       { src: "/img/connect/connect01/connect01_02.jpg", text: "애장품 2" },
@@ -682,12 +681,12 @@ function loadPage() {
   if (pageKey && pageData[pageKey]) {
     const content = pageData[pageKey];
 
-    // 왼쪽 이미지와 텍스트 설정
+    // 왼쪽 이미지 설정
     document.getElementById("leftImage").src = content.leftImage;
-    document.getElementById("leftText").textContent = content.leftText;
 
     // 오른쪽 이미지와 텍스트 동적으로 생성
     const right = document.querySelector(".right");
+    right.innerHTML = ""; // 기존 콘텐츠 초기화
 
     // large-layer에 데이터를 동적으로 추가
     right.innerHTML = `

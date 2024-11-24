@@ -10,14 +10,14 @@
   </head>
   <body>
     <!-- 고정된 헤더 -->
-    <header class="fixed-header">
-      <nav class="menu">
-        <a href="/html/about.html" class="menu about">about</a>
-        <a href="/html/connect.html" class="menu connect">connect</a>
-        <a href="/html/modeling.html" class="menu modeling">modeling</a>
-        <a href="/html/archiving.html" class="menu archiving">archiving</a>
-      </nav>
-      <a href="/index.html" class="project-text">stor.e</a>
+    <header class="header">
+      <div class="headerContainer">
+        <a href="/index.html" class="headerTitle">stor.e</a>
+        <a href="../html/about.html" class="headerMenu move">ABOUT</a>
+        <a href="../html/connect.html" class="headerMenu now">CONNECT</a>
+        <a href="../html/modeling.html" class="headerMenu move">MODELING</a>
+        <a href="../html/archiving.html" class="headerMenu move">ARCHIVING</a>
+      </div>
     </header>
 
     <!-- 뒤로가기 버튼 -->
@@ -26,11 +26,52 @@
     <!-- 좌측 레이어 -->
     <div class="left">
       <img id="leftImage" src="" />
-      <div id="leftText" class="text"></div>
     </div>
 
     <!-- 우측 레이어 -->
-    <div class="right"></div>
+    <div class="right">
+      <!-- 소개란 -->
+      <div class="introduceContainer">
+        <div class="introduceNameAndTitle">
+          <div class="introduceName">김진경의 애장품</div>
+          <div class="introduceTitle">인형, 피규어</div>
+        </div>
+        <div class="introduceDetail">
+          자취하는 대학생들의 애장품을 가구에 담아보았다.<br />
+          모듈 결합 방식에 대해 설명한 후 자유롭게 가구를 채울수 있도록 시간을
+          주고<br />
+          그 과정을 기록하고 물건에 대한 이야기를 나눴다.<br />
+        </div>
+      </div>
+
+      <!-- 그리드 레이어 -->
+      <div class="connectLargeGrid">
+        <!-- 4x1 그리드 -->
+        <div class="connectSmallGrid">
+          <!-- 첫 번째 커넥터 -->
+          <a href="../html/connectTemplate.html">
+            <div class="connectElement">
+              <img
+                src="../img/connect/connect01.jpg"
+                class="elementImage"
+                data-hover="../img/connect/connect01Change.jpg"
+              />
+              <div class="elementText">가챠와 인형</div>
+            </div>
+          </a>
+          <!-- 두 번째 커넥터 -->
+          <a href="../html/connectTemplate.html">
+            <div class="connectElement">
+              <img
+                src="../img/connect/connect02.jpg"
+                class="elementImage"
+                data-hover="../img/connect/connect02Change.jpg"
+              />
+              <div class="elementText">필름카메라, 카라비너</div>
+            </div>
+          </a>
+        </div>
+    </div>
 
     <!-- 빨간 원 -->
     <div class="red-circle" id="redCircle">
@@ -43,7 +84,6 @@
       <p class="popup-text">감상 후 메인 페이지<br />로 돌려주세요 :></p>
     </div>
 
-    <script src="/js/connectLoader.js"></script>
     <script src="/js/scroll.js"></script>
     <script src="/js/popup.js"></script>
   </body>

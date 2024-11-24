@@ -29,6 +29,17 @@ html {
   grid-template-columns: 18.06vw 56.43vw;
 }
 
+.introduceTitle {
+  font-family: "Pretendard";
+  font-weight: bold;
+  font-size: 1.25vw;
+}
+
+.introduceDetail {
+  font-family: "Helvetica";
+  font-size: 0.83vw;
+}
+
 .connectLargeGrid {
   position: relative;
   display: grid;
@@ -51,7 +62,7 @@ html {
   position: relative;
   display: grid;
   width: 100%;
-  grid-template-rows: 57.41vh 11.94vh;
+  grid-template-rows: auto 11.94vh;
 }
 
 .elementImage {
@@ -59,6 +70,13 @@ html {
   object-fit: cover;
 }
 
-.a {
-  text-decoration-line: none;
+.elementText {
+  margin-top: 2.31vh;
+  font-family: "Pretendard";
+  font-size: 0.83vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
