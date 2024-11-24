@@ -41,15 +41,22 @@ html {
 /* 소개란 */
 .right {
   position: relative;
+}
+
+.introduceContainer {
+  position: relative;
   display: grid;
   left: 50.52vw;
   margin-top: 15.46vh;
   width: 37.34vw;
   height: 11.94vh;
-  grid-template-columns: 18.06vw 56.43vw;
+  grid-template-columns: 1fr 1fr;
 }
 
-.introduceContainer {
+.introduceName {
+  font-family: "Pretendard";
+  font-size: 0.83vw;
+  color: #b1b1b1;
 }
 
 .introduceTitle {
@@ -67,17 +74,17 @@ html {
   position: relative;
   display: grid;
   grid-template-rows: auto;
-  left: 50%; /* 화면 중앙 기준으로 위치 */
-  transform: translateX(-50%); /* 중앙 정렬 */
-  width: 75.76vw;
+  left: 50.52vw;
+  width: 37.24vw;
   height: auto;
+  margin-top: 1vh;
 }
 
 .connectSmallGrid {
   position: relative;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(4, 18.06vw);
+  grid-template-columns: repeat(2, 18.06vw);
   gap: 1.17vw;
 }
 
@@ -94,9 +101,9 @@ html {
 }
 
 .elementText {
-  margin-top: 2.31vh;
   font-family: "Pretendard";
   font-size: 0.83vw;
+  margin-top: 2.31vh;
 }
 
 a {
