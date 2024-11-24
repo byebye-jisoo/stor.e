@@ -1,128 +1,58 @@
-body,
-html {
-  background-color: #fafafa;
+/* Reset default margins and padding */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "Helvetica";
-  src: url("../font/Helvetica.ttf") format("truetype");
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Light.otf") format("opentype");
 }
 
-.container {
-  position: absolute;
-  top: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 84.6vw;
-  height: 80vh;
-  background-color: #fafafa;
+@font-face {
+  font-family: "Alias";
+  src: url("../font/Alias-Bold.ttf") format("truetype");
 }
 
-.text-layer {
-  top: 33.43vh;
-  font-family: "Helvetica";
-  font-size: 1.7vh;
-  margin-bottom: 1.7vh;
-}
-
-.container img {
-  width: 100%;
-  height: 37.2%;
-}
-
-.container img:nth-of-type(1) {
-  margin-bottom: 10.1vh;
-  background-color: aliceblue;
-}
-
-.container img:nth-of-type(2) {
-  background-color: aliceblue;
-}
-
-#visitorForm {
-  position: absolute;
-  top: 100vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 84.6vw;
-  height: auto;
-  font-family: "Helvetica";
-  background-color: #fafafa;
-}
-
-#input {
-}
-
-.line {
-  width: 31%;
-  margin-left: 0vw;
-}
-
-#name {
-  background-color: #fafafa;
-  width: 30%;
-  margin-top: 3vh;
-  border: none;
-  font-size: 1.4vh;
-}
-
-#contents {
-  background-color: #fafafa;
-  width: 100%;
-  height: 10vh;
-  margin-top: 3vh;
-  border: none;
-  resize: none;
-  font-family: "Helvetica";
-  font-size: 1.4vh;
-}
-
-/* 기본 스타일 */
-button[type="submit"] {
-  background-color: #111111;
-  color: #fafafa;
-  border: none;
-  padding: 5px 10px; /* 버튼 패딩 */
-  border-radius: 10vw; /* 모서리를 부드럽게 */
-  cursor: pointer; /* 마우스 오버 시 포인터 표시 */
-  font-size: 1.3vh;
-}
-
-.guestList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 요소 */
-  gap: 3%; /* 요소 간 간격 */
-  margin-top: 8vh;
-}
-
-.header {
+/* 기본 글꼴, 배경 및 텍스트 색상 */
+body {
   display: flex;
-  justify-content: space-between; /* 날짜와 이름을 양쪽으로 정렬 */
+  justify-content: center;
   align-items: center;
-  font-size: 1.4vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.guestDate {
-  color: gray;
+/* 메뉴 그리드 레이어 */
+.archivingMenu {
+  display: grid;
+  position: absolute;
+  text-align: center;
+  top: 4.907vh;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.938vw;
+  text-decoration: none;
 }
 
-.guestName {
-  font-weight: bold;
-  text-align: right; /* 내용과 간격 추가 */
+.menuItem {
+  display: flex;
+  font-family: "Pretendard";
+  color: #fafafa;
+  text-decoration: none;
 }
 
-.divider {
-  width: 100%; /* 구분선 너비 */
-  margin: 0;
-  border: 0;
-  border-top: 1px solid #111111; /* 구분선 스타일 */
+/* 각 버튼의 위치 설정 */
+.menuItem:nth-child(5) {
+  justify-content: flex-end;
 }
 
-.guestContents {
-  line-height: 1.5; /* 내용 줄 간격 */
-  font-size: 1.4vh;
-  margin-bottom: 7vh;
+.title {
+  position: absolute;
+  top: 66.39vh;
+  left: 2.55vw;
+  font-family: "Alias";
+  font-size: 9.48vw;
+  color: #fafafa;
+  text-decoration: none;
 }
