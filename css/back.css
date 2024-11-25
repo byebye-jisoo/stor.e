@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../font/Helvetica.ttf") format("truetype");
+}
+
+.back {
+  position: fixed;
+  top: 82.96vh;
+  left: 2.55vw;
+  font-family: "Helvetica";
+  font-size: 1.85vh;
+  color: black;
+  text-decoration: underline;
+  z-index: 100;
+}
