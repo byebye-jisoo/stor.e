@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Page Scroll</title>
     <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/archiving.css" />
+    <link rel="stylesheet" href="../css/archivingVisitor.css" />
     <link rel="stylesheet" href="../css/popup.css" />
   </head>
   <body>
@@ -19,29 +19,23 @@
         <a href="../html/archiving.html" class="headerMenu move">ARCHIVING</a>
       </div>
     </header>
-
-    <div class="container">
-      <div class="text-layer">
-        2024.03.01 - 2024.11.25
-      </div>
-      <img src="../img/archiving/archiving01.jpg" />
-      <div class="text-layer">
-        함께한 사람들
-      </div>
-      <img src="../img/archiving/archiving02.jpg" />
-    </div>
     
     <form id="visitorForm">
       <div class="text-layer">방명록</div>
-      <hr class="line">
       <div class="input">
-        <input type="text" id="name" placeholder="이름 입력" required />
-        <textarea id="contents" placeholder="한 마디 적어주세요 ^^" required></textarea>
-        <button type="submit">등록하기</button>
+        <input type="text" id="name" placeholder="이름" required />
+        <textarea id="contents" placeholder="내용" required></textarea>
+        <button type="submit">등록</button>
       </div>
       <!-- 작성된 방명록들 -->
-      <div class="guestList"></div>
     </form>
+
+    <div class="scrolling">
+      <div class="guestLayer">
+        <div class="guestList"></div>
+      </div>
+    </div>
+    
 
       <!-- 빨간 원 -->
       <div class="red-circle" id="redCircle">
@@ -55,7 +49,7 @@
       </div>
     </div>
 
-    <script src="../js/archiving.js"></script>
+    <script src="../js/archivingVisitor.js"></script>
     <script src="../js/scroll.js"></script>
     <script src="../js/popup.js"></script>
   </body>

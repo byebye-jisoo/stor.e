@@ -10,11 +10,6 @@
   src: url("../font/Pretendard-Light.otf") format("opentype");
 }
 
-@font-face {
-  font-family: "Alias";
-  src: url("../font/Alias-Bold.ttf") format("truetype");
-}
-
 /* 기본 글꼴, 배경 및 텍스트 색상 */
 body {
   display: flex;
@@ -29,30 +24,28 @@ body {
   display: grid;
   position: absolute;
   text-align: center;
-  top: 4.907vh;
+  top: 50%; /* 화면 세로 중심 */
+  left: 50%; /* 화면 가로 중심 */
+  transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
   grid-template-rows: repeat(3, 1fr);
-  gap: 0.938vw;
-  text-decoration: none;
-}
-
-.menuItem {
-  display: flex;
+  gap: 5vh;
   font-family: "Pretendard";
-  color: #fafafa;
-  text-decoration: none;
+  color: black;
+  transition: font-weight 0.3s;
+  font-size: 1.67vw;
 }
 
-/* 각 버튼의 위치 설정 */
-.menuItem:nth-child(5) {
-  justify-content: flex-end;
+.archivingMenu a:hover {
+  font-weight: bold;
 }
 
-.title {
-  position: absolute;
-  top: 66.39vh;
-  left: 2.55vw;
-  font-family: "Alias";
-  font-size: 9.48vw;
-  color: #fafafa;
-  text-decoration: none;
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 부모 요소의 텍스트 색상 상속 */
+}
+
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none; /* hover, focus, visited 상태에서도 밑줄 제거 */
 }

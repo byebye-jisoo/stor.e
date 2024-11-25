@@ -7,88 +7,86 @@ html {
 }
 
 @font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Light.otf") format("opentype");
+}
+
+@font-face {
   font-family: "Helvetica";
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
-.container {
+#visitorForm {
   position: absolute;
-  top: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 84.6vw;
-  height: 80vh;
-  background-color: #fafafa;
+  top: 22.13vh;
+  left: 11.15vw;
+  width: 18.13vw;
+  height: auto;
+  font-family: "Pretendard";
 }
 
 .text-layer {
-  top: 33.43vh;
-  font-family: "Helvetica";
-  font-size: 1.7vh;
-  margin-bottom: 1.7vh;
+  position: relative;
+  font-size: 1.25vw;
+  font-weight: bold;
 }
 
-.container img {
-  width: 100%;
-  height: 37.2%;
-}
-
-.container img:nth-of-type(1) {
-  margin-bottom: 10.1vh;
-  background-color: aliceblue;
-}
-
-.container img:nth-of-type(2) {
-  background-color: aliceblue;
-}
-
-#visitorForm {
-  position: absolute;
-  top: 100vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 84.6vw;
-  height: auto;
-  font-family: "Helvetica";
-  background-color: #fafafa;
-}
-
-#input {
-}
-
-.line {
-  width: 31%;
-  margin-left: 0vw;
+.input {
+  display: flex;
+  flex-direction: column; /* 자식 요소를 세로로 배치 */
 }
 
 #name {
-  background-color: #fafafa;
-  width: 30%;
-  margin-top: 3vh;
+  background-color: #ededed;
+  width: 100%;
+  height: 4.63vh;
+  margin-top: 7.59vh;
   border: none;
-  font-size: 1.4vh;
+  border-radius: 0.156vw;
+  padding: 0.99vw 1.39vh;
+  font-size: 0.83vw;
 }
 
 #contents {
-  background-color: #fafafa;
+  background-color: #ededed;
   width: 100%;
-  height: 10vh;
-  margin-top: 3vh;
+  height: 40.93vh;
+  margin-top: 2.22vh;
   border: none;
   resize: none;
-  font-family: "Helvetica";
-  font-size: 1.4vh;
+  padding: 0.99vw 1.39vh;
+  font-family: "Pretendard";
+  font-size: 0.83vw;
+  border-radius: 0.156vw;
 }
 
 /* 기본 스타일 */
 button[type="submit"] {
-  background-color: #111111;
-  color: #fafafa;
-  border: none;
-  padding: 5px 10px; /* 버튼 패딩 */
-  border-radius: 10vw; /* 모서리를 부드럽게 */
+  background-color: #fafafa;
+  color: black;
+  width: 3vw;
+  height: 2.87vh;
+  border-color: black;
+  border-width: 0.052vw; /* 테두리 두께 설정 */
+  border-style: solid; /* 테두리 스타일 설정 */
+  border-radius: 10vw;
   cursor: pointer; /* 마우스 오버 시 포인터 표시 */
+  font-family: Helvetica;
   font-size: 1.3vh;
+  text-align: center;
+  margin-left: auto;
+  margin-top: 2.41vh;
+}
+
+.scrolling {
+  position: absolute;
+  top: 27.5vh;
+  left: 31.56vw;
+  width: 58.13vw;
+}
+
+.guestLayer {
+  position: relative;
 }
 
 .guestList {

@@ -36,10 +36,8 @@ function formatDate(date) {
   const year = date.getFullYear(); // 연도
   const month = String(date.getMonth() + 1).padStart(2, "0"); // 월 (1부터 시작, 2자리)
   const day = String(date.getDate()).padStart(2, "0"); // 일 (2자리)
-  const hours = String(date.getHours()).padStart(2, "0"); // 시간 (24시간제)
-  const minutes = String(date.getMinutes()).padStart(2, "0"); // 분 (2자리)
 
-  return `${year}.${month}.${day} ${hours}:${minutes}`; // 원하는 형식으로 반환
+  return `${year}.${month}.${day}`; // 원하는 형식으로 반환
 }
 
 // 폼 제출 이벤트 처리
