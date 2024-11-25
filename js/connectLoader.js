@@ -1,3 +1,67 @@
+// 페이지 데이터를 로드하여 동적으로 HTML을 생성
+function loadPageContent() {
+  // URL에서 pageKey 가져오기
+  const params = new URLSearchParams(window.location.search);
+  const pageKey = params.get("connect"); // ?connect=connect01 이런 식으로 전달받음
+
+  // 페이지 데이터 확인
+  if (pageKey && pages[pageKey]) {
+    const data = pages[pageKey];
+
+    // 좌측 이미지 설정
+    const leftImage = document.getElementById("leftImage");
+    if (leftImage) leftImage.src = data.leftImage;
+
+    // 소개란 텍스트 변경
+    const introduceName = document.getElementById("introduceName");
+    const introduceTitle = document.getElementById("introduceTitle");
+    const introduceDetail = document.getElementById("introduceDetail");
+
+    if (introduceName && introduceTitle && introduceDetail) {
+      introduceName.textContent = data.introduceName;
+      introduceTitle.textContent = data.introduceTitle;
+      introduceDetail.innerHTML = data.introduceDetail;
+    }
+
+    // 그리드 레이어 생성
+    const connectLargeGrid = document.querySelector(".connectLargeGrid");
+    if (connectLargeGrid) {
+      connectLargeGrid.innerHTML = ""; // 기존 내용 초기화
+
+      // 데이터를 2개씩 묶어서 그리드 생성
+      let currentSmallGrid = ""; // 현재 그리드 HTML
+      data.connectElements.forEach((element, index) => {
+        // 새로운 묶음의 시작
+        if (index % 2 === 0) {
+          currentSmallGrid += `<div class="connectSmallGrid">`;
+        }
+
+        // 각 요소 추가
+        currentSmallGrid += `
+          <div class="connectElement">
+            <img src="${element.image}" class="elementImage" />
+            <div class="elementText">${element.text}</div>
+          </div>
+        `;
+
+        // 묶음의 끝
+        if (index % 2 === 1 || index === data.connectElements.length - 1) {
+          currentSmallGrid += `</div>`;
+          connectLargeGrid.innerHTML += currentSmallGrid;
+          currentSmallGrid = ""; // 다음 묶음을 위해 초기화
+        }
+      });
+    }
+  } else {
+    console.error(
+      "유효하지 않은 페이지 키이거나 페이지 데이터를 찾을 수 없습니다."
+    );
+  }
+}
+
+// 페이지 로드 시 실행
+window.onload = loadPageContent;
+
 // 페이지 데이터 객체
 const pages = {
   connect01: {
@@ -12,6 +76,7 @@ const pages = {
     connectElements: [
       { image: "../img/connect/connect01/connect01_01.jpg", text: "인형1" },
       { image: "../img/connect/connect01/connect01_02.jpg", text: "인형2" },
+      { image: "../img/connect/connect01/connect01_02.jpg", text: "인형3" },
     ],
   },
   connect02: {
@@ -28,43 +93,3 @@ const pages = {
     ],
   },
 };
-
-// 페이지 로드 함수
-function loadPageContent() {
-  // URL에서 page 쿼리 파라미터 가져오기
-  const params = new URLSearchParams(window.location.search);
-  const pageKey = params.get("connect");
-
-  // 페이지 데이터 유효성 확인
-  if (pageKey && pages[pageKey]) {
-    const data = pages[pageKey];
-
-    // 좌측 이미지 변경
-    document.getElementById("leftImage").src = data.leftImage;
-
-    // 소개란 텍스트 변경
-    document.getElementById("introduceName").textContent = data.introduceName;
-    document.getElementById("introduceTitle").textContent = data.introduceTitle;
-    document.getElementById("introduceDetail").innerHTML = data.introduceDetail;
-
-    // 그리드 레이어 생성
-    const connectLargeGrid = document.querySelector(".connectLargeGrid");
-    connectLargeGrid.innerHTML = data.connectElements
-      .map(
-        (element) => `
-        <div class="connectSmallGrid">
-          <div class="connectElement">
-            <img src="${element.image}" class="elementImage" />
-            <div class="elementText">${element.text}</div>
-          </div>
-        </div>
-      `
-      )
-      .join("");
-  } else {
-    console.error("해당 페이지 데이터를 찾을 수 없습니다.");
-  }
-}
-
-// 페이지 로드 시 자동 실행
-window.onload = loadPageContent;

@@ -22,7 +22,7 @@ function createGuestItem(dateTime, name, contents) {
   const formattedContents = contents.replace(/\n/g, "<br>");
 
   newItem.innerHTML = `
-    <div class="header">
+    <div class="visitorHeader">
       <small class="guestDate">${dateTime}</small>
       <p class="guestName">${name}</p>
     </div>

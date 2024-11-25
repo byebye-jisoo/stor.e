@@ -11,7 +11,26 @@ html {
   box-sizing: border-box;
 }
 
-.workerImageContainer {
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../font/Helvetica.ttf") format("truetype");
+}
+
+.workerTitle {
+  position: absolute;
+  top: 22.41vh;
+  left: 12.14vw;
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 1.25vw;
+}
+
+.workerImage {
   position: absolute;
   top: 50%; /* 화면 세로 중심 */
   left: 50%; /* 화면 가로 중심 */
@@ -19,10 +38,17 @@ html {
   width: 75.68vw;
   height: 45.09vh;
   overflow: hidden;
+  background-color: antiquewhite;
 }
 
-.workerImage {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.workerList {
+  font-family: "Helvetica";
+  font-size: 0.83vw;
+}
+
+.web {
+  position: absolute;
+  top: 75.19vh;
+  left: 50.47vw;
+  align-items: left;
 }
