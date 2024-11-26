@@ -23,6 +23,12 @@ html {
   height: 81.3vh;
 }
 
+.content img {
+  width: 100%; /* 부모인 content의 너비에 맞춤 */
+  height: 100%; /* 부모인 content의 높이에 맞춤 */
+  object-fit: cover; /* 이미지가 content 크기에 맞게 채워짐 (비율 유지) */
+}
+
 .content:nth-child(1) {
   background-color: antiquewhite;
 }
