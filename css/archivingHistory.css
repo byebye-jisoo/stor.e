@@ -21,13 +21,26 @@ html {
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
-.workerTitle {
+.historyTitle {
   position: absolute;
   top: 22.41vh;
-  left: 12.14vw;
+  left: 50%; /* 화면 가로 중심 */
+  transform: translateX(-50%); /* 가로 중앙 정렬 */
+  width: 75.68vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   font-family: "Helvetica";
   font-weight: bold;
   font-size: 1.25vw;
+}
+
+.workerTitle {
+  text-al: left;
+}
+
+.writeDate {
+  text-align: right;
 }
 
 .workerImage {

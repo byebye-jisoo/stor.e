@@ -34,9 +34,9 @@
   left: 50%; /* 화면 중앙 기준으로 위치 */
   transform: translateX(-50%); /* 중앙 정렬 */
   height: 6.1vh;
-  grid-template-columns: 56.65vw 8.645vw 8.645vw 8.645vw 8.645vw;
+  grid-template-columns: 56.65vw 8.645vw 8.645vw 8.645vw 10.1vw;
   grid-template-rows: 1fr;
-  gap: 0.938vw;
+  gap: 0.6vw;
   z-index: 10;
   background-color: #fafafa;
 }

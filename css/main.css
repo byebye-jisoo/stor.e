@@ -57,3 +57,12 @@ body {
   color: #fafafa;
   text-decoration: none;
 }
+
+.nameTag {
+  position: absolute;
+  top: 88.28vh;
+  left: 2.55vw;
+  font-family: "Pretendard";
+  font-size: 0.8vw;
+  color: #fff;
+}
