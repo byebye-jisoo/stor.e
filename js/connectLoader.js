@@ -66,30 +66,90 @@ window.onload = loadPageContent;
 const pages = {
   connect01: {
     leftImage: "../img/connect/connect01/main.jpg",
-    introduceName: "김진경의 애장품",
-    introduceTitle: "인형, 피규어",
+    introduceName: "송세아의 애장품",
+    introduceTitle: "목도리",
     introduceDetail: `
       자취하는 대학생들의 애장품을 가구에 담아보았다.<br />
       모듈 결합 방식에 대해 설명한 후 자유롭게 가구를 채울 수 있도록 시간을 주고<br />
       그 과정을 기록하고 물건에 대한 이야기를 나눴다.<br />
     `,
     connectElements: [
-      { image: "../img/connect/connect01/connect01_01.jpg", text: "인형1" },
-      { image: "../img/connect/connect01/connect01_02.jpg", text: "인형2" },
-      { image: "../img/connect/connect01/connect01_02.jpg", text: "인형3" },
+      {
+        image: "../img/connect/송세아/",
+        text: "일본 가서 선물 받은 래번클로 목도리",
+      },
+      {
+        image: "../img/connect/송세아/크롭1.png",
+        text: "크리스마스 선물 목도리",
+      },
+      { image: "../img/connect/송세아/크롭2.png", text: "생일선물 목도리" },
+      {
+        image: "../img/connect/송세아/크롭3.png",
+        text: "엄마가 춥다고 사준 목도리",
+      },
+      {
+        image: "../img/connect/송세아/",
+        text: "목도리인 척 하는 콘서트 슬로건",
+      },
     ],
   },
   connect02: {
     leftImage: "../img/connect/connect02/main.jpg",
-    introduceName: "박영진의 애장품",
+    introduceName: "김수아의 애장품",
     introduceTitle: "책, 공책",
     introduceDetail: `
       나만의 공간에 꼭 필요한 물건들.<br />
       시간이 지나도 변하지 않는 애장품들입니다.<br />
     `,
     connectElements: [
-      { image: "../img/connect/connect02/connect02_01.jpg", text: "책1" },
-      { image: "../img/connect/connect02/connect02_02.jpg", text: "책2" },
+      {
+        image: "../img/connect/김수아/크롭1.png",
+        text: "초록색 곰인형",
+      },
+    ],
+  },
+  connect04: {
+    leftImage: "../img/connect/connect02/main.jpg",
+    introduceName: "정재문의 애장품",
+    introduceTitle: "앨범",
+    introduceDetail: `
+      나만의 공간에 꼭 필요한 물건들.<br />
+      시간이 지나도 변하지 않는 애장품들입니다.<br />
+    `,
+    connectElements: [
+      { image: "../img/connect/정재문/", text: "사자 피규어" },
+      { image: "../img/connect/정재문/", text: "스텔라장 앨범" },
+      { image: "../img/connect/정재문/", text: "어린시절 앨범(외부)" },
+      { image: "../img/connect/정재문/", text: "작품 앨범(외부)" },
+      { image: "../img/connect/정재문/", text: "어린시절 앨범(내부)" },
+      { image: "../img/connect/정재문/", text: "작품 앨범(내부)" },
+    ],
+  },
+  connect06: {
+    leftImage: "../img/connect/connect02/main.jpg",
+    introduceName: "정병호의 애장품",
+    introduceTitle: "카메라, 카라비너",
+    introduceDetail: `
+      나만의 공간에 꼭 필요한 물건들.<br />
+      시간이 지나도 변하지 않는 애장품들입니다.<br />
+    `,
+    connectElements: [
+      { image: "../img/connect/정병호/", text: "카메라" },
+      { image: "../img/connect/정병호/", text: "카라비너" },
+    ],
+  },
+  connect12: {
+    leftImage: "../img/connect/connect02/main.jpg",
+    introduceName: "신한영의 애장품",
+    introduceTitle: "오디오 인터페이스",
+    introduceDetail: `
+      나만의 공간에 꼭 필요한 물건들.<br />
+      시간이 지나도 변하지 않는 애장품들입니다.<br />
+    `,
+    connectElements: [
+      { image: "../img/connect/신한영/", text: "헤드셋" },
+      { image: "../img/connect/신한영/", text: "마이크" },
+      { image: "../img/connect/신한영/", text: "오디오 인터페이스" },
     ],
   },
 };

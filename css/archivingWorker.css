@@ -42,13 +42,14 @@ html {
 }
 
 .workerList {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  top: 80vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 5.42vw;
   font-family: "Helvetica";
   font-size: 0.83vw;
-}
-
-.web {
-  position: absolute;
-  top: 75.19vh;
-  left: 50.47vw;
-  align-items: left;
+  text-align: center;
 }

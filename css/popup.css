@@ -70,7 +70,7 @@
 /* 팝업 창 텍스트 */
 .popup .popup-text {
   font-family: "Helvetica";
-  font-size: 0.75vw; /* 16px */
+  font-size: 0.65vw; /* 16px */
   color: #fafafa;
   text-align: center;
   line-height: 1.5;

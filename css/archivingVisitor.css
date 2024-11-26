@@ -17,6 +17,15 @@ html {
   src: url("../font/Helvetica.ttf") format("truetype");
 }
 
+.visitorTitle {
+  position: absolute;
+  top: 22.41vh;
+  left: 12.14vw;
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 1.25vw;
+}
+
 #visitorForm {
   position: absolute;
   top: 22.13vh;
@@ -24,12 +33,6 @@ html {
   width: 18.13vw;
   height: auto;
   font-family: "Pretendard";
-}
-
-.text-layer {
-  position: relative;
-  font-size: 1.25vw;
-  font-weight: bold;
 }
 
 .input {
@@ -70,8 +73,9 @@ html {
 }
 
 .writeDate {
-  font-family: Helvetica;
+  font-family: "Helvetica";
   font-size: 1.3vh;
+  font-family: "Helvetica";
   color: gray; /* 텍스트 색상 */
   margin: 0;
   line-height: 2.87vh; /* "등록" 버튼의 높이와 동일 */
@@ -88,7 +92,7 @@ button[type="submit"] {
   border-style: solid; /* 테두리 스타일 설정 */
   border-radius: 10vw;
   cursor: pointer; /* 마우스 오버 시 포인터 표시 */
-  font-family: Helvetica;
+  font-family: "Helvetica";
   font-size: 1.3vh;
   text-align: center;
   margin-left: auto;
@@ -100,12 +104,13 @@ button[type="submit"] {
   top: 27.5vh;
   left: 31.56vw;
   width: 58.13vw;
-  height: 72.5;
+  height: 47.78vh;
   overflow-y: auto;
 }
 
 .guestLayer {
   position: relative;
+  font-family: "Helvetica";
 }
 
 .guestList {
