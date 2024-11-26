@@ -43,15 +43,31 @@ html {
   text-align: right;
 }
 
-.workerImage {
+.workerImageContainer {
   position: absolute;
-  top: 50%; /* 화면 세로 중심 */
+  top: 55vh;
   left: 50%; /* 화면 가로 중심 */
   transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
-  width: 75.68vw;
-  height: 45.09vh;
-  overflow: hidden;
-  background-color: antiquewhite;
+  width: 100vw;
+  height: auto;
+  overflow-x: scroll; /* 가로 스크롤 활성화 */
+  overflow-y: hidden; /* 세로 스크롤 제거 */
+  white-space: nowrap; /* 이미지가 줄바꿈되지 않도록 설정 */
+  display: flex;
+  align-items: flex-start; /* 이미지의 상단을 container 상단에 맞춤 */
+}
+
+.imageWrapper img {
+  display: inline-block; /* 가로로 나열 */
+  margin-right: 0.6vw; /* 이미지 간격 */
+  width: 18vw; /* 고정된 가로 길이 설정 (예: 300px) */
+  height: auto; /* 비율에 맞게 세로 자동 조정 */
+  object-fit: contain; /* 비율 유지하며 잘리지 않도록 설정 */
+  vertical-align: top;
+}
+
+.imageWrapper img:first-child {
+  margin-left: 12.2vw; /* 컨테이너 좌측과 첫 이미지 사이의 간격 */
 }
 
 .workerList {
