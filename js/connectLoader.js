@@ -112,7 +112,8 @@ const pages = {
     introduceName: "최종윤의 애장품",
     introduceTitle: "필름",
     introduceDetail: `
-      
+      나만의 공간에 꼭 필요한 물건들.<br />
+      시간이 지나도 변하지 않는 애장품들입니다.<br />
     `,
     connectElements: [
       { image: "../img/connect/최종윤/크롭1.png", text: "필름" },
@@ -240,7 +241,8 @@ const pages = {
     introduceName: "박소연의 애장품",
     introduceTitle: "쥐인형, 폐의약품, 이빨석고",
     introduceDetail: `
-      내 생에 첫 녹음장비. 애정하는 내 친구다.
+      나만의 공간에 꼭 필요한 물건들.<br />
+      시간이 지나도 변하지 않는 애장품들입니다.<br />
     `,
     connectElements: [
       {
@@ -295,7 +297,7 @@ const pages = {
     introduceName: "류가연의 애장품",
     introduceTitle: "미술용품",
     introduceDetail: `
-      입시 때 사용했던 물건
+      무언가를 잘 모아두지 않는 성격이지만 미술용품은 하나 사는데 돈이 많이 들어, ’언젠가 쓸 일이 있지 않을까?‘하는 마음에 버리지 않았더니 그것들이 모여 저의 소장품 또는 애장품이 된 것 같습니다. 입시미술부터 시작해, 대학 들어와서 타과 실기수업을 들으면서 샀던 것들입니다.  문득 꺼내보면 그 재료들을 썼던 때가 떠오르면서 얼른 작업실을 구하고 싶다는 욕망은 한 없이 커지고..
     `,
     connectElements: [
       { image: "../img/connect/류가연/크롭1.png", text: "마카" },
