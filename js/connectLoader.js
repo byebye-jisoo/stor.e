@@ -128,16 +128,27 @@ const pages = {
     introduceName: "정재문의 애장품",
     introduceTitle: "앨범",
     introduceDetail: `
-      나만의 공간에 꼭 필요한 물건들.<br />
-      시간이 지나도 변하지 않는 애장품들입니다.<br />
+      물건에 큰 애정을 두는 편이 아니라 방안에 버리지 못할 것들이 무엇이 있을까 생각해 봤을 때, 생각난 물건들이다.
     `,
     connectElements: [
-      { image: "../img/connect/정재문/크롭1.png", text: "사자 피규어" },
-      { image: "../img/connect/정재문/크롭2.png", text: "스텔라장 앨범" },
+      {
+        image: "../img/connect/정재문/크롭1.png",
+        text: "구석에 방치되어 있었지만 나의 어린시절 친구였던 사자피규어",
+      },
+      {
+        image: "../img/connect/정재문/크롭2.png",
+        text: "선물 받았지만 기계가 없어 사용은 못해본 그렇기에 더 소중한 스텔라장 LP판",
+      },
       { image: "../img/connect/정재문/크롭3.png", text: "어린시절 앨범(외부)" },
-      { image: "../img/connect/정재문/크롭4.png", text: "작품 앨범(외부)" },
+      {
+        image: "../img/connect/정재문/크롭4.png",
+        text: "내 기억너머의 기억들을 보관 하며 내 인생을 담고 있는 앨범과 작품집들(외부)",
+      },
       { image: "../img/connect/정재문/크롭5.png", text: "어린시절 앨범(내부)" },
-      { image: "../img/connect/정재문/크롭6.png", text: "작품 앨범(내부)" },
+      {
+        image: "../img/connect/정재문/크롭6.png",
+        text: "내 기억너머의 기억들을 보관 하며 내 인생을 담고 있는 앨범과 작품집들(내부)",
+      },
     ],
   },
   connect05: {
@@ -177,14 +188,38 @@ const pages = {
       직접 만든 도자기와 여러 작가들의 작품
     `,
     connectElements: [
-      { image: "../img/connect/임지우/크롭1.png", text: "차 주전자" },
-      { image: "../img/connect/임지우/크롭2.png", text: "호리병" },
-      { image: "../img/connect/임지우/크롭3.png", text: "블록병" },
-      { image: "../img/connect/임지우/크롭4.png", text: "술잔" },
-      { image: "../img/connect/임지우/크롭5.png", text: "찻잔" },
-      { image: "../img/connect/임지우/크롭6.png", text: "소품1" },
-      { image: "../img/connect/임지우/크롭7.png", text: "소품2" },
-      { image: "../img/connect/임지우/크롭8.png", text: "소품3" },
+      {
+        image: "../img/connect/임지우/크롭1.png",
+        text: "내가 만든 주전자와 최근에 수집한 티매트 그리고 엄마가 제작해준 티코스터",
+      },
+      {
+        image: "../img/connect/임지우/크롭2.png",
+        text: "김민지 작가의 길쭉한 화병<br/>화장토로 표면에 그림을 남긴 화병. 졸업할 당시 서로 하나씩 작업을 교환하며 받음",
+      },
+      {
+        image: "../img/connect/임지우/크롭3.png",
+        text: "박래기 작가의 망간 호<br/>자신의 작업과 물물교환하여 받았던 멋진 작품 ",
+      },
+      {
+        image: "../img/connect/임지우/크롭4.png",
+        text: "<굽잔><br/>최근에 만들었던 굽잔. 딱 하나 만들었는데 마음에 들어 더 만들기 위해 원형의 모델용으로 소장하고 있음.",
+      },
+      {
+        image: "../img/connect/임지우/크롭5.png",
+        text: "<김수연 작가의 잔><br/>차도구 전시를 하는 선배 작가의 전시를 보러 갔다가 구매했던 잔. 모양이 모두 달라 한참 고민하며 고름",
+      },
+      {
+        image: "../img/connect/임지우/크롭6.png",
+        text: "<박이름 작가의 인센스 홀더><br/>대학원에 처음 들어왔을 때 환영의 의미로 선물받은 인센스 홀더. 작게 달린 3개의 발이 궈여움. ",
+      },
+      {
+        image: "../img/connect/임지우/크롭7.png",
+        text: "<돌><br/>학교에서 박스로 발견된 정체 불명의 돌",
+      },
+      {
+        image: "../img/connect/임지우/크롭8.png",
+        text: "<이인화 작가의 이중기 큐브><br/>개인적으로 도자 작가중에 가장 닮고싶은 이인화 작가님의 작업. 개인전에 가서 수집한 작품.",
+      },
     ],
   },
   connect08: {
