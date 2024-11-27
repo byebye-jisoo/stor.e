@@ -21,24 +21,18 @@ html {
   left: 2.6vw;
   width: 94.9vw;
   height: 81.4vh;
+  background-color: #fafafa;
 }
 
 .content img {
-  width: 100%; /* 부모인 content의 너비에 맞춤 */
-  height: 100%; /* 부모인 content의 높이에 맞춤 */
-  object-fit: cover; /* 이미지가 content 크기에 맞게 채워짐 (비율 유지) */
-}
-
-.content:nth-child(1) {
-  background-color: antiquewhite;
-}
-
-.content:nth-child(2) {
-  background-color: blue;
-}
-
-.content:nth-child(3) {
-  background-color: blueviolet;
+  width: auto; /* 이미지 비율에 따라 너비 자동 조정 */
+  height: auto; /* 이미지 비율에 따라 높이 자동 조정 */
+  max-width: 100%; /* 부모 레이어 크기를 넘지 않도록 제한 */
+  max-height: 100%; /* 부모 레이어 크기를 넘지 않도록 제한 */
+  position: absolute; /* 이미지가 레이어 중앙에 위치하도록 설정 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 이미지 중앙 정렬 */
 }
 
 .footer {
