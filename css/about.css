@@ -4,51 +4,35 @@ html {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  height: 100%;
 }
 
-/* 이미지 영역 설정 */
 .wrap {
-  background-color: #fafafa;
   position: relative;
-  top: 0%;
+  top: 0;
   width: 100%;
+  height: 100vh; /* 모든 섹션이 합쳐진 높이를 자동으로 포함 */
   transition: top 0.5s ease-in-out;
 }
 
 .content {
   position: relative;
-  top: 9vh;
-  left: 2.6vw;
-  width: 94.9vw;
-  height: 81.4vh;
-  background-color: #fafafa;
+  width: 100%;
+  height: 100vh; /* 각각의 섹션은 화면 크기만큼 차지 */
 }
 
 .content img {
-  width: auto; /* 이미지 비율에 따라 너비 자동 조정 */
-  height: auto; /* 이미지 비율에 따라 높이 자동 조정 */
-  max-width: 100%; /* 부모 레이어 크기를 넘지 않도록 제한 */
-  max-height: 100%; /* 부모 레이어 크기를 넘지 않도록 제한 */
-  position: absolute; /* 이미지가 레이어 중앙에 위치하도록 설정 */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* 이미지 중앙 정렬 */
+  width: 100%; /* 화면 너비 꽉 채움 */
+  height: 100%; /* 화면 높이 꽉 채움 */
+  object-fit: cover; /* 비율을 유지하며 영역 채우기 */
 }
 
 .footer {
-  position: fixed;
-  top: calc(9vh + 81.3vh);
-  width: 100%;
-  height: 10vh;
-  background-color: #fafafa;
+  display: none; /* 불필요한 경우 숨김 */
 }
 
 .scrollerLayer {
-  position: fixed;
-  top: calc(9vh + 81.3vh);
-  width: 100%;
-  height: auto;
-  background-color: #fafafa;
+  display: none; /* 불필요한 경우 숨김 */
 }
 
 .scroller {

@@ -1,67 +1,54 @@
-/* Reset default margins and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Alias";
-  src: url("../font/Alias-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  src: url("../font/Pretendard-Light.otf") format("opentype");
-}
-
 .header {
   position: fixed;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 3vh;
-  background-color: #fafafa;
+  background-color: rgba(255, 255, 255, 0); /* 완전히 투명한 배경 */
   z-index: 9;
-  opacity: 0.95;
+  border: none; /* 테두리가 있다면 제거 */
+  box-shadow: none; /* 그림자가 있다면 제거 */
+  pointer-events: none; /* 배경 클릭 방지 */
 }
 
-/* 헤더 그리드 레이어 */
 .headerContainer {
   display: grid;
   position: absolute;
   top: 3vh;
-  left: 50%; /* 화면 중앙 기준으로 위치 */
-  transform: translateX(-50%); /* 중앙 정렬 */
+  left: 50%;
+  transform: translateX(-50%);
   height: 6.1vh;
   grid-template-columns: 56.65vw 8.645vw 8.645vw 8.645vw 10.1vw;
   grid-template-rows: 1fr;
   gap: 0.6vw;
-  z-index: 10;
-  background-color: #fafafa;
+  z-index: 10; /* 텍스트가 배경 위에 표시되도록 설정 */
+  background-color: transparent; /* 헤더 배경 제거 */
+  pointer-events: auto; /* 콘텐츠와 상호작용 가능 */
 }
 
 .headerTitle {
   display: flex;
   font-family: "Alias";
   font-size: 2.214vw;
-  color: #111111;
+  color: #111111; /* 텍스트 색상 유지 */
   text-decoration: none;
+  z-index: 11; /* 텍스트가 배경 위에 표시되도록 설정 */
 }
 
 .headerMenu {
   display: flex;
   justify-content: flex-end;
   font-family: "Pretendard";
-  color: #bababa;
+  color: #bababa; /* 기본 텍스트 색상 */
   text-decoration: none;
   font-size: 1.1vw;
+  z-index: 11; /* 텍스트가 배경 위에 표시되도록 설정 */
 }
 
 .headerMenu.now {
-  color: #111111;
+  color: #111111; /* 현재 활성화된 메뉴 텍스트 */
 }
 
 .headerMenu.move:hover {
-  color: #111111;
+  color: #111111; /* 호버 시 텍스트 색상 */
 }
