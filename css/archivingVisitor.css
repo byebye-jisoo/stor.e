@@ -117,7 +117,7 @@ button[type="submit"] {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 요소 */
   gap: 3%; /* 요소 간 간격 */
-  margin-top: 4.7vh;
+  margin-top: 3.7vh;
 }
 
 .visitorHeader {
